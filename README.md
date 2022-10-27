@@ -22,6 +22,7 @@ bind_layers(GOOSE, GOOSEPDU)
 
 # 1. Masquerade Exploit:
 
+```bash
 slsuser@slsuser-vm:/opt/analysis_scripts$ python3 goose_exploit.py -h
 usage: python3 goose_exploit.py [options]
 
@@ -39,9 +40,11 @@ options:
         Example: 
         ----------
             python3 goose_exploit.py --livecapture --output <filename>
+```
 
 # 2. Replay Attack
 
+```bash
 slsuser@slsuser-vm:/opt/analysis_scripts$ python3 goose_replay.py -h
 usage: python3 goose_replay.py [options]
 
@@ -60,7 +63,7 @@ options:
         ----------
             python3 goose_replay.py --livecapture --output <filename>
 
-
+```
 # REFERENCES:
 
 https://idahogray.github.io/blog/generating-goose-messages.html
