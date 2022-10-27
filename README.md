@@ -1,5 +1,5 @@
-HOW TO SETUP:
-######################
+# HOW TO SETUP:
+
 1. Clone the git repo: https://github.com/keith-gray-powereng/goose
 2. Copy the `goose` directory from the repo into that directory where the exploit is located.
 3. Paste this code in `goose.py` file inside the `goose` directory from step 2
@@ -20,8 +20,7 @@ bind_layers(GOOSE, GOOSEPDU)
 4. Run the exploit.
 
 
-1. Masquerade Exploit:
-#####################
+# 1. Masquerade Exploit:
 
 slsuser@slsuser-vm:/opt/analysis_scripts$ python3 goose_exploit.py -h
 usage: python3 goose_exploit.py [options]
@@ -41,8 +40,7 @@ options:
         ----------
             python3 goose_exploit.py --livecapture --output <filename>
 
-2. Replay Attack
-####################
+# 2. Replay Attack
 
 slsuser@slsuser-vm:/opt/analysis_scripts$ python3 goose_replay.py -h
 usage: python3 goose_replay.py [options]
@@ -63,7 +61,7 @@ options:
             python3 goose_replay.py --livecapture --output <filename>
 
 
-REFERENCES:
-##################
+# REFERENCES:
+
 https://idahogray.github.io/blog/generating-goose-messages.html
 https://github.com/cutaway-security/goosestalker
