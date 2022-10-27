@@ -207,13 +207,6 @@ try:
 except KeyboardInterrupt:
     print('[-] Exiting')
 
-
-# MODIFYING THE PACKETS (GOOSE PAYLOAD)
-# true_value = Data()
-# false_value = Data()
-# true_value.setComponentByName('boolean', True)
-# false_value.setComponentByName('boolean', False)
-
 # NOW CREATING A COPY OF A PACKET ON THE BASIS OF THE USER SELECTION
 user_packet = g_packets[packet_no]
 mod_packet = user_packet.copy()
@@ -237,16 +230,6 @@ mod_pdu_decode = gooseAllData_decode(mod_pdu)
 # MODIFYING THE SQNUM AND STNUM PACKETS
 tmpSQNUM = mod_pdu_decode.getComponentByName('sqNum')
 tmpSTNUM = mod_pdu_decode.getComponentByName('stNum')
-
-# UPDATING THE BOOLEAN VALUES IN THE GOOSEPDU HEADER
-
-# for value in range(mod_pdu_decode['numDatSetEntries']):
-#     if mod_pdu_decode['allData'].getComponentByPosition(value) == False:
-#         mod_pdu_decode['allData'].setComponentByPosition(value, true_value)
-#         continue
-#     elif mod_pdu_decode['allData'].getComponentByPosition(value) == True:
-#         mod_pdu_decode['allData'].setComponentByPosition(value, false_value)
-#         continue
 
 # INCREMENT THE STNUM VALUE 
 mod_pdu_decode.setComponentByName('stNum', (int(tmpSTNUM)+1))
