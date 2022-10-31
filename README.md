@@ -5,6 +5,12 @@
 3. Paste this code in `goose.py` file inside the `goose` directory from step 2
 
 ```python
+from struct import pack
+
+from scapy.packet import Packet
+from scapy.fields import XShortField, XByteField, ConditionalField
+from scapy.all import bind_layers
+
 class GOOSEPDU(Packet):
     name = "GOOSEPDU"
     fields_desc = [
